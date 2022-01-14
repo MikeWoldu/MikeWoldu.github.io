@@ -1,0 +1,906 @@
+
+
+:root{
+   
+    --primary: rgb(13, 71, 105);
+   /*--primary: rgb(205, 50, 50);*/
+    --dark: black;
+    --light: white;
+    --fade:rgba(0,0,0,0.9);
+    
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+ body{
+   
+   
+    height: 100%; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    
+}
+ 
+/*PAGECONTAINER AND STICKY FOOTER*/
+
+#page-container {
+  position: relative;
+  min-height: 100vh ;
+  display: block;
+  overflow: visible;
+  margin-bottom: 100px;
+  
+}
+#page-container::after{
+    content: "";
+    display: block;
+    height: -100px;
+}
+
+
+
+/*HEADER */
+
+header{
+    
+    background-color: var(--primary);
+    margin: 0px;
+    margin-bottom: 5%;
+    color: var(--light) ;
+    width: 100%;
+    height: fit-content;
+    
+}
+
+header h1{
+   padding-top: 5%;
+    text-align: center;
+    width: auto;
+    font-weight:bolder;
+    
+}
+
+header #headerH2{
+    padding: 2% 2% 5%;
+    text-align: center;
+    font-style: italic;
+   
+}
+
+
+
+ /*.menu  = NAVIGATION BAR */
+
+ .menu{
+   width: 100%;
+   text-align: center;
+   padding: 0;
+   margin: 0;
+ }
+
+.menu ul {
+
+      width: 100%;
+    display: flex;
+ flex-direction: row;
+ justify-content: space-evenly;
+}
+
+.menu ul li{
+    
+    display: inline-block;
+    background-color: var(--primary);
+    
+    align-items: center;
+    width: 20% ; 
+    height: 40px; 
+    
+}
+
+ /*All the cells in the whole menu*/
+
+ .menu ul li a{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--light);
+    
+    transition: all ease 0.9s;
+   line-height: 2;
+    width: 100%;
+    font-weight: bold;
+        
+}
+
+/*HOVER OVER MENU ITEMS*/
+
+.menu ul li a:hover, .menu ul li.dropdown ul li a:hover{
+    background-color: var(--light);
+    color: var(--primary);
+    font-size:larger;
+    font-weight: bold;
+}
+
+
+.menu ul li.dropdown ul {
+    background-color: var(--primary);
+    position:absolute;
+    padding-left: 0px;
+    margin: 0;
+    width: 130px;
+    display: none;
+}
+
+.menu ul li.dropdown ul li {
+  
+    width: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
+    padding: 0px;
+
+
+}
+
+.menu ul li.dropdown:hover ul{
+
+    display: block;
+    
+}
+.menu ul li.dropdown ul li a{
+
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#current{
+    font-weight: bold;
+    background-color: var(--light);
+    color: var(--primary);
+    
+} 
+
+/*MAIN*/
+
+main{
+    flex: 1 0 auto;
+}
+
+
+
+/* bodyHeader */
+
+.bodyHeader{
+
+    margin-left: 10%;
+
+}
+
+
+          /* SECTIONS */
+section{
+    
+    margin-top: 0;
+    padding-top: 2%;
+    
+}
+/*
+.sectionHeader{
+    margin-left: 10%;
+}
+*/
+
+.text , .appText{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column ;
+    align-items: center;
+    padding-bottom: 30px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/*-----INDEX-----*/
+.indexText{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+      flex-direction: column ;
+      align-items: center;
+}
+
+.all{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    width: 80%;   
+}
+
+.indexText h3, .indexText .indexP{
+    width: 100%;
+    padding-bottom: 2%;
+    
+}
+
+
+
+/*----------------------------------*/
+
+
+/* mobile app */
+
+h3{
+    width: 20%;
+}
+
+
+.appText p{
+width: 80%;
+left: 0;
+padding-bottom: 2%;
+}
+
+/* Index and Device*/
+.text .indexDevice{
+    width: 80%;
+}
+
+.text .indexP{
+    width: 90%;
+}
+
+
+.deviceImg{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 2%;
+   
+}
+
+.deviceImg img{
+    width: 80%;
+    align-content: center;
+    padding: 2% 0%;
+}
+
+.indexImg{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 2%;
+    align-items: center;
+    
+
+}
+
+.indexImg img{
+    width: 80%;
+    margin-bottom: 2%;
+}
+
+
+
+h2{
+    padding: 5% 10%;
+}
+
+/*--------------------*/
+
+
+.appText .appImage{
+width: 100%;
+right: 0;
+text-align: center;
+}
+
+.appImage .img{
+
+    width: 55%;
+}
+
+/*section div .authors-profile{
+    margin-left: 5%;
+    margin-right: 5%;
+}*/
+section h1{
+    margin-left: 5%;
+    padding-bottom: 5%;
+}
+
+#firstsection{
+    margin-top: 10px;
+}
+
+.light{
+    background-color: var(--light);
+}
+
+.dark{
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+
+/* AUTHORS--- SECTION*/
+
+#authorsFirstSection div{
+    width: 100%;
+   
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    
+       }
+#authorsFirstSection div img{
+    max-width: 70%;
+    margin-bottom: 5%;
+
+    }
+
+.authors-div{
+    display: flex;
+    justify-content: center;
+   flex-wrap: wrap;
+    flex-direction: column ;
+    align-items: center;
+    padding-bottom: 30px;
+    width: 100%;
+
+}
+
+.profilePic{
+    width: 50%;
+    justify-content: center;
+    padding-bottom: 2%;
+}
+
+.authors-profile{
+    width: 80%;
+    padding-bottom: 2%;    
+}
+
+.socialsDiv{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content:space-around;
+    flex-direction: row;
+    align-items: center;
+    right: 0;
+}
+
+.socialsDiv a{
+    width: 20%;
+    padding-bottom: 10%;
+    cursor: pointer;
+    align-items: center;
+}
+.socials{
+    width: 100%;
+ 
+}
+
+  /*-------GALLERY---------*/
+.gallery{
+    width: 80%;
+    margin: 10% auto 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+
+}
+
+.gallery img{
+    width: 100%;
+
+    cursor: pointer;
+    
+    transition: all .4s ease-in-out;
+}
+  
+.gallery img:hover{
+   
+    transform: scale(1.3);
+}
+
+.full-img{
+    width:100%;
+    height: 100vh;
+    background: var(--fade);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    flex-direction: column;
+}
+
+.full-img img{
+    max-width: 90%;
+    max-height: 80%;
+  
+}
+
+.full-img span{
+
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    color: var(--light) ;
+    cursor: pointer;
+
+}
+.full-img #pic-title{
+    color: var(--light);
+    font-size: large;
+    bottom: 5%;
+    right: 50%;
+    padding-top: 2%;
+}
+
+
+/*SPACE*/
+.space{
+    display: flex;
+    position: relative;
+    right: 0;
+    height: 30px;
+    color: var(--dark);
+    padding-bottom: 30px;
+    
+}
+
+.space a{
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    font-size: x-large;
+    padding-right: 20px;
+    
+}
+
+/*FOOTER*/
+
+
+footer{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary);
+    height: 100px;
+    bottom: 0;
+}
+
+footer div {
+    display: flex;
+    color: var(--light);
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+   
+    height: 100px;
+  
+}
+
+/***************  Tablet SCREEN  *******************/
+@media screen and (min-width:768px) {
+
+    :root{
+       
+        --primary: rgb(10, 100, 15);
+       /*--primary: rgb(205, 50, 50);*/
+        --dark: black;
+        --light: white;
+        --fade:rgba(0,0,0,0.9);
+        
+    }
+
+    .profilePic{
+        width: 35%;
+    }
+
+    .socials{
+        width: 70%;
+    }
+
+
+
+
+
+
+}
+
+/***************  LAPTOP SCREEN  *******************/
+@media screen and (min-width:1024px) {
+
+
+    
+:root{
+   
+    --primary: rgb(192, 105, 5);
+   /*--primary: rgb(205, 50, 50);*/
+    --dark: black;
+    --light: white;
+    --fade:rgba(0,0,0,0.9);
+    
+}
+
+  
+    /* Insert code for larger screen*/
+
+ p{
+     font-size: larger;
+ }
+
+.bodyHeader{
+    padding: 0;
+   margin: 0;
+   width: 35%;
+   text-align:start;
+   padding-left: 5%;
+    
+}
+    .menu{
+        display: flex;
+        width: 50%;
+    }
+
+    
+    .menu ul li {
+        
+        width: 20%;
+         text-align: center;
+     }
+
+
+    .menu ul li a {
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+        text-align: center;
+        line-height: 2.2;
+    }
+
+    section{
+    max-height: fit-content;
+    }
+
+
+    header h1, header h2{
+        display: inline-block;
+    }
+
+    header h1{
+        padding-bottom: 40px;
+        float: left;
+        width: 30%;
+    }
+
+    header h2{
+       float: right;
+        margin: 1em;
+        width: 60%;
+        overflow: auto;
+    }
+
+    /*-----INDEX-----*/
+
+.indexText{
+    display: flex;
+    
+    flex-direction: row ;
+    justify-content: space-evenly;
+    align-items:flex-start;
+    
+    
+}
+
+.all{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+       
+}
+
+.indexImg{
+    width: 25%;
+    align-items: flex-start;
+}
+
+.indexText h3, .indexText .indexP{
+    width: 90%;
+    padding-bottom: 2%;
+    
+}
+
+
+.indexImg .img{
+    width: 100%;
+}
+
+/*----------------------------------*/
+    
+/* Index and Device */
+
+.text{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: flex-start;
+    
+}
+
+.text .indexDevice{
+   
+    width: 35%;
+    margin: 0;
+    top: 0;
+    
+    text-align: start;
+    padding-left: 2%;
+}
+
+.deviceImg{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2%;
+    top: 0;
+
+    width: 45%;
+   
+}
+
+.deviceImg img{
+
+    width: 100%;
+    padding-bottom: 2%;
+   
+}
+
+.indexImg{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    margin-bottom: 2%;
+    top: 0;
+
+    width: 45%;
+}
+.indexImg img{
+
+    width: 100%;
+    padding-bottom: 2%;
+   
+}
+
+h2{
+    padding: 2% 8%;
+}
+
+/*--------------------*/
+
+
+
+/*Mobile App Page*/
+.appText{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    align-items: flex-start;
+
+}
+.appText p{
+    width: 50%;
+   
+
+}
+
+
+
+
+
+.appText .appImage{
+    width: 25%;
+    right: 0;
+    text-align: center;
+    margin: 0;
+}
+
+.appText .appImage img{
+    width: 100%;
+}
+
+
+
+
+
+/*----------------*/
+     
+    
+
+
+
+
+ /* AUTHORS--- SECTION*/
+
+
+#firstsection div img{
+    max-width: 50%;
+    margin-bottom: 2%;
+    
+
+    }
+
+.authors-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+  
+.profilePic{
+    width: 15%;
+}
+
+.authors-profile{
+    width: 60%;
+}
+
+.socialsDiv{
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.socialsDiv a{
+    width: 100%;
+}
+
+
+
+
+    /*-------GALLERY---------*/
+
+    .full-img{
+        width:100%;
+        height: 100vh;
+        background: var(--fade);
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+    
+    
+    }
+    
+    .full-img img{
+        max-width: 90%;
+        max-height: 80%;
+      
+    }
+    
+    .full-img span{
+    
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        font-size: 30px;
+        color: var(--light) ;
+        cursor: pointer;
+    
+    }
+    
+    
+    #footer{
+        bottom: 0;
+        
+        width: 100%;
+    }
+
+ 
+}
+
+/*************  LARGE LAPTOP SCREEN  ***************/
+
+@media screen and (min-width:1440px) {
+
+    
+:root{
+   
+    --primary: rgb(78, 9, 189);
+   /*--primary: rgb(205, 50, 50);*/
+    --dark: black;
+    --light: white;
+    --fade:rgba(0,0,0,0.9);
+}
+
+.indexImg{
+    width: 35%;
+}
+.deviceImg{
+    width: 25%;
+}
+
+
+.appText .appImage{
+    width: 20%;
+}
+
+.socialsDiv{
+    width: 8%;
+}
+
+
+
+}
+
+/*************  4k SCREEN  ***************/
+@media screen and (min-width:1920px) {
+
+
+    :root{
+   
+        
+        --primary: rgb(8, 8, 8);
+        --dark: black;
+        --light: white;
+        --fade:rgba(0,0,0,0.9);
+        font-size: large;
+        line-height: 2;
+    }
+
+   
+    .indexImg{
+        width: 25%;
+    }
+    .deviceImg{
+        width: 20%;
+    }
+    
+    
+    .appText .appImage{
+        width: 10%;
+    }
+
+    .authors-pic{
+        width: 50%;
+    }
+    
+    .socialsDiv{
+        width: 5%;
+    }
+
+    .space{
+        padding-bottom: 40px;
+    }
+    
+
+}
+  
